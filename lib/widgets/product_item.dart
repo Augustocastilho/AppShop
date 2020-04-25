@@ -6,11 +6,13 @@ import '../utils/app_routes.dart';
 
 class ProductItem extends StatelessWidget {
 
+  final Product product;
+
+  ProductItem(this.product);
 
   @override
   Widget build(BuildContext context) {
 
-      final Product product = ModalRoute.of(context).settings.arguments as Product;
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
