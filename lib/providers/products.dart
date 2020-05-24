@@ -8,6 +8,11 @@ class Products with ChangeNotifier {
 
 
   List<Product> get itens => [..._items]; //cria uma cópia, para q não altere diretamente pelo get
+  
+  int get itemsCount {
+    return _items.length;
+  }
+  
   List<Product> get favoriteItens {
     return _items.where((prod) => prod.isFavorite).toList();
   }
